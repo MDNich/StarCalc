@@ -405,46 +405,7 @@ class RRLyraeViewController: NSViewController {
         }
         
         var Mag = -2.81 * log10(periodDays)-1.43
-        
-        var distance = 0.0
-        if distanceField.stringValue == "" {
-            var distTMP = Double(distanceField.stringValue)!
-            switch brightnessUnit.indexOfSelectedItem {
-            case 0:
-                distance = distTMP
-            case 1:
-                distance = distTMP/3.261563
-            case 2:
-                distance = 1/(distTMP/1000)
-            default:
-                distance = distTMP
-            }
-        }
-        
-        
-        var brightnessPrint = 0.0
-        switch brightnessUnit.indexOfSelectedItem {
-        case 3:
-            brightnessPrint = Mag
-        case 2:
-            brightnessPrint = Mag - 5 + 5*log10(distance)
-        case 0:
-            let Lsun = 3.9e26 // W
-            let L0 = 3.0128e28 // W
-            let exp = -0.4*(Mag)
-            let lum = L0 * pow(10, exp)
-            brightnessPrint = lum / Lsun
-        case 1:
-            let Lsun = 3.9e26 // W
-            let L0 = 3.0128e28 // W
-            let exp = -0.4*(Mag)
-            brightnessPrint = L0 * pow(10, exp)
-        default:
-            brightnessPrint = 0.0
-        }
-        
-        brightnessField.stringValue = "\(brightnessPrint)"
-        
+        print("Found absolute magnitude of \(Mag)")
         return Mag
     }
     
@@ -467,7 +428,7 @@ class RRLyraeViewController: NSViewController {
         }
         
         else {
-            distanceField.stringValue = "PROVIDE M_APP"
+            distanceField.stringValue = "NEED M_APP"
         }
 
     }

@@ -1,4 +1,4 @@
 # StarCalc
 
 
-will be incorporated into https://github.com/mdnich/scitool/main
+will be incorporated into [SciTool (Swift)](https://github.com/mdnich/scitool/tree/main)

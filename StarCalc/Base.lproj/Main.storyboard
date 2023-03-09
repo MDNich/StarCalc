@@ -70,7 +70,7 @@
                                                 <segue destination="diU-wO-Vl0" kind="show" id="yXz-jy-iM0"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="RR Lyrae" keyEquivalent="3" id="S7a-G5-65v">
+                                        <menuItem title="RR Lyrae (*)" keyEquivalent="3" id="S7a-G5-65v">
                                             <connections>
                                                 <segue destination="ghN-Ej-UPM" kind="show" id="Nkj-GG-7Nc"/>
                                             </connections>
@@ -530,7 +530,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158.5" y="908"/>
+            <point key="canvasLocation" x="105" y="913"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="e8y-O3-iwG">

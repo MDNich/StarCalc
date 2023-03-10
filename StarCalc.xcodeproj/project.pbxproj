@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		580F9BA329BA1A9A00F5A546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580F9BA229BA1A9A00F5A546 /* AppDelegate.swift */; };
-		580F9BA529BA1A9A00F5A546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580F9BA429BA1A9A00F5A546 /* ViewController.swift */; };
+		580F9BA529BA1A9A00F5A546 /* AstroViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580F9BA429BA1A9A00F5A546 /* AstroViewControllers.swift */; };
 		580F9BA729BA1A9A00F5A546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580F9BA629BA1A9A00F5A546 /* Assets.xcassets */; };
 		580F9BAA29BA1A9A00F5A546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580F9BA829BA1A9A00F5A546 /* Main.storyboard */; };
+		584F97A829BB696500AE4798 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 584F97A729BB696500AE4798 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580F9B9F29BA1A9A00F5A546 /* StarCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		580F9BA229BA1A9A00F5A546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		580F9BA429BA1A9A00F5A546 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		580F9BA429BA1A9A00F5A546 /* AstroViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroViewControllers.swift; sourceTree = "<group>"; };
 		580F9BA629BA1A9A00F5A546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		580F9BA929BA1A9A00F5A546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		580F9BAB29BA1A9A00F5A546 /* StarCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarCalc.entitlements; sourceTree = "<group>"; };
+		584F97A729BB696500AE4798 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		580F9B9629BA1A9A00F5A546 = {
 			isa = PBXGroup;
 			children = (
+				584F97A729BB696500AE4798 /* README.md */,
 				580F9BA129BA1A9A00F5A546 /* StarCalc */,
 				580F9BA029BA1A9A00F5A546 /* Products */,
 			);
@@ -53,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				580F9BA229BA1A9A00F5A546 /* AppDelegate.swift */,
-				580F9BA429BA1A9A00F5A546 /* ViewController.swift */,
+				580F9BA429BA1A9A00F5A546 /* AstroViewControllers.swift */,
 				580F9BA629BA1A9A00F5A546 /* Assets.xcassets */,
 				580F9BA829BA1A9A00F5A546 /* Main.storyboard */,
 				580F9BAB29BA1A9A00F5A546 /* StarCalc.entitlements */,
@@ -119,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584F97A829BB696500AE4798 /* README.md in Resources */,
 				580F9BA729BA1A9A00F5A546 /* Assets.xcassets in Resources */,
 				580F9BAA29BA1A9A00F5A546 /* Main.storyboard in Resources */,
 			);
@@ -131,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				580F9BA529BA1A9A00F5A546 /* ViewController.swift in Sources */,
+				580F9BA529BA1A9A00F5A546 /* AstroViewControllers.swift in Sources */,
 				580F9BA329BA1A9A00F5A546 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

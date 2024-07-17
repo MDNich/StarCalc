@@ -67,7 +67,7 @@ class LumMagViewController: NSViewController {
             ResultField.stringValue = "Luminosity of star is \(lum) W or \(lumFactor) L_sun. Distance is \(dist!) pc, \(dist!*3.261563) ly, and has a parallax of \(1/dist! * 1000) mas. Abs Magnitude: \(input!+5-5*log10(dist!)), App Magnitude: \(input!)\(strExtra)"
             
             
-            
+        
             
         }
         else if (whatGiven == 0) { // FIND Magnitude

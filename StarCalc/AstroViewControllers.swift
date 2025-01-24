@@ -33,6 +33,11 @@ class LumMagViewController: NSViewController {
     }
     
     @IBAction func calculate(_ sender: Any) {
+        if((distField.stringValue == "") || (knownQuantity.stringValue == "")){
+            ResultField.stringValue = "Please fill in all fields."
+            return
+        }
+                
         let input = Double(knownQuantity.stringValue)
         var dist = Double(distField.stringValue)
         let distUnit = distUnits.indexOfSelectedItem // 0 = pc, 1 = ly, 2 = mas
@@ -139,8 +144,16 @@ class BinSysViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DispatchQueue.main.async {
+            self.alert()
+        }
         // Do any additional setup after loading the view.
+    }
+    func alert() {
+        let alert = NSAlert()
+        alert.alertStyle = .critical
+        alert.messageText = "This calculator is not very reliable. Use at your own discretion."
+        alert.runModal()
     }
 
     
@@ -208,6 +221,22 @@ class RRLyraeViewController: NSViewController {
     @IBOutlet var brightnessUnit: NSPopUpButton!
     @IBOutlet var distanceUnit: NSPopUpButton!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.alert()
+        }
+        // Do any additional setup after loading the view.
+    }
+    func alert() {
+        let alert = NSAlert()
+        alert.alertStyle = .critical
+        alert.messageText = "This calculator often overshoots the period by a factor of 2. Check your work."
+        alert.runModal()
+    }
+    
+    
     @IBAction func calculatePeriod(_ sender: Any?) {
         let L0 = 3.0128e28 // W
         let Lsun = 3.9e26 // W
@@ -216,7 +245,7 @@ class RRLyraeViewController: NSViewController {
         var distance = 0.0
         if distanceField.stringValue == "" {
             var distTMP = Double(distanceField.stringValue)!
-            switch brightnessUnit.indexOfSelectedItem {
+            switch distanceUnit.indexOfSelectedItem {
             case 0:
                 distance = distTMP
             case 1:
@@ -249,7 +278,15 @@ class RRLyraeViewController: NSViewController {
         // (M+1.43)/(-2.81) = log(P)
         // P = 10^((M+1.43)/(-2.81))
         
-        var periodDays = pow(10,(absmag + 1.43)/(-2.81))
+        // https://arxiv.org/pdf/astro-ph/0406067
+        // Mag_I = 0.471 − 1.132 log P + 0.205 log (0.0134*10^(-1.7))
+        // log P = 1/1.132*(0.471-Mag_I+0.205*log (0.0134*10^(-1.7)))
+        // P = 10^(1/1.132*(0.471-Mag_I+0.205*log (0.0134*10^(-1.7))))
+        
+        
+        var periodDays = pow(10,1/1.132*(0.471-absmag+0.205*log10(0.0134*pow(10,-1.16))))
+        
+        //pow(10,(absmag + 1.43)/(-2.81))
         var periodPrint = 0.0
         switch periodUnit.indexOfSelectedItem {
         case 0:
